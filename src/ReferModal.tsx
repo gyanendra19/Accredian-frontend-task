@@ -89,7 +89,7 @@ const ReferralModal = ({
         ></div>
 
         {/* Right Side - Form */}
-        <div className="md:w-1/2 w-full p-6 relative">
+        <div className="md:w-1/2 w-full p-6 relative overflow-y-scroll hide-scroll">
           {/* Close Button */}
           <button
             onClick={onClosee}
@@ -155,7 +155,7 @@ const ReferralModal = ({
                     className="w-full focus:outline-none p-1 text-xs border-b border-gray-300"
                   />
                   {errors.friendName && (
-                    <p className="text-sm text-red-600">
+                    <p className="text-xs text-red-600">
                       {errors.friendName.type === "required" &&
                         "This field is required"}
                     </p>
@@ -203,7 +203,7 @@ const ReferralModal = ({
                     className="w-full focus:outline-none p-1 text-xs border-b border-gray-300"
                   />
                   {errors.friendphone && (
-                    <p className="text-sm text-red-600">
+                    <p className="text-xs text-red-600">
                       {errors.friendphone.type === "required" &&
                         "This field is required"}
                       {errors.friendphone.type === "pattern" &&
@@ -229,7 +229,7 @@ const ReferralModal = ({
                     <option>Finance</option>
                   </select>
                   {errors.course && (
-                    <p className="text-sm text-red-600">
+                    <p className="text-xs text-red-600">
                       {errors.course.type === "required" &&
                         "This field is required"}
                     </p>
