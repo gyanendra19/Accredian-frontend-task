@@ -47,20 +47,20 @@ const ReferralModal = ({
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:3000/friendDetails", {
+      await axios.post("https://accredian-backend-task-quq4.onrender.com/friendDetails", {
         name: data.friendName,
         email: data.friendemail,
         phone: data.friendphone,
         course: data.course,
       });
 
-      await axios.post("http://localhost:3000/user", {
+      await axios.post("https://accredian-backend-task-quq4.onrender.com/user", {
         name: data.name,
         email: data.email,
         phone: data.phone,
       });
 
-      await axios.post("http://localhost:3000/email", {
+      await axios.post("https://accredian-backend-task-quq4.onrender.com/email", {
         name: data.friendName,
         email: data.friendemail,
       });
